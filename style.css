@@ -82,7 +82,7 @@ header .btn {
 
 /* features buttons */
 
-#features button {
+#features__nav button {
   position: relative;
   font-size: 1.2rem;
   background: white;
@@ -90,11 +90,11 @@ header .btn {
   border-top: 1px solid #aaa;
 }
 
-#features button:last-child {
+#features__nav button:last-child {
   border-bottom: 1px solid #aaa;
 }
 
-#features button:focus:after {
+#features__nav button:focus:after {
   content: "";
   position: absolute;
   background-color: #fa5757;
@@ -157,7 +157,7 @@ header .btn {
     top: 80px;
   }
 
-  #features button {
+  #features__nav button {
     border-top: none;
     border-bottom: 1px solid grey;
   }

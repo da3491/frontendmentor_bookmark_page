@@ -20,6 +20,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Bookmark landing page</title>
@@ -97,33 +98,142 @@
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
-        <div
-          id="features"
-          class="d-flex flex-column flex-lg-row justify-content-center my-5"
-        >
-          <button role="tab" class="col p-3">Simple Bookmarking</button>
-          <button role="tab" class="col p-3">Speedy Searching</button>
-          <button role="tab" class="col p-3">Easy Sharing</button>
-        </div>
-        <div class="d-flex flex-column flex-lg-row">
-          <img
-            class="py-5 col-lg-6"
-            src="./images/illustration-features-tab-1.svg"
-            alt="feature 1"
-          />
+        <nav id="features">
           <div
-            class="col-lg-6 d-flex justify-content-center align-items-center"
+            class="d-flex flex-column flex-lg-row justify-content-center my-5"
+            id="features__nav"
+            role="tablist"
           >
-            <div class="text-center text-lg-start ps-lg-5 ms-lg-5">
-              <h3>Bookmark in one click</h3>
-              <p class="py-2">
-                Organize your bookmarks however you like. Our simple
-                drag-and-drop interface gives you complete control over how you
-                manage your favourite sites.
-              </p>
-              <button class="btn btn-primary d-none d-lg-block">
-                More Info
-              </button>
+            <button
+              class="col p-3 active"
+              id="features__tab1"
+              data-bs-toggle="tab"
+              data-bs-target="#features__tab1Content"
+              type="button"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+            >
+              Simple Bookmarking
+            </button>
+            <button
+              class="col p-3"
+              id="features__tab2"
+              data-bs-toggle="tab"
+              data-bs-target="#features__tab2Content"
+              type="button"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+            >
+              Speedy Searching
+            </button>
+            <button
+              class="col p-3"
+              id="features__tab3"
+              data-bs-toggle="tab"
+              data-bs-target="#features__tab3Content"
+              type="button"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              Easy Sharing
+            </button>
+          </div>
+        </nav>
+        <div id="features__tabContent" class="tab-content">
+          <!-- tab 1 -->
+          <div
+            class="tab-pane active fade show"
+            id="features__tab1Content"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+            tabindex="0"
+          >
+            <div class="d-flex flex-column flex-lg-row">
+              <img
+                class="col-lg-6 pb-5"
+                src="./images/illustration-features-tab-1.svg"
+                alt="feature 1"
+              />
+              <div
+                class="col-lg-6 d-flex justify-content-center align-items-center"
+              >
+                <div class="text-center text-lg-start ps-lg-5 ms-lg-5">
+                  <h3>Bookmark in one click</h3>
+                  <p class="py-2">
+                    Organize your bookmarks however you like. Our simple
+                    drag-and-drop interface gives you complete control over how
+                    you manage your favourite sites.
+                  </p>
+                  <button class="btn btn-primary d-none d-lg-block">
+                    More Info
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- tab 2 -->
+          <div
+            class="tab-pane fade"
+            id="features__tab2Content"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+            tabindex="0"
+          >
+            <div class="d-flex flex-column flex-lg-row">
+              <img
+                class="col-lg-6 pb-5"
+                src="./images/illustration-features-tab-2.svg"
+                alt="feature 2"
+              />
+              <div
+                class="col-lg-6 d-flex justify-content-center align-items-center"
+              >
+                <div class="text-center text-lg-start ps-lg-5 ms-lg-5">
+                  <h3>Bookmark in one click</h3>
+                  <p class="py-2">
+                    Organize your bookmarks however you like. Our simple
+                    drag-and-drop interface gives you complete control over how
+                    you manage your favourite sites.
+                  </p>
+                  <button class="btn btn-primary d-none d-lg-block">
+                    More Info
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- tab -->
+          <div
+            class="tab-pane fade"
+            id="features__tab3Content"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+            tabindex="0"
+          >
+            <div class="d-flex flex-column flex-lg-row">
+              <img
+                class="col-lg-6 pb-5"
+                src="./images/illustration-features-tab-3.svg"
+                alt="feature 3"
+              />
+              <div
+                class="col-lg-6 d-flex justify-content-center align-items-center"
+              >
+                <div class="text-center text-lg-start ps-lg-5 ms-lg-5">
+                  <h3>Bookmark in one click</h3>
+                  <p class="py-2">
+                    Organize your bookmarks however you like. Our simple
+                    drag-and-drop interface gives you complete control over how
+                    you manage your favourite sites.
+                  </p>
+                  <button class="btn btn-primary d-none d-lg-block">
+                    More Info
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
