@@ -80,6 +80,32 @@ header .btn {
   font-size: 0.8rem;
 }
 
+/* features buttons */
+
+#features button {
+  position: relative;
+  font-size: 1.2rem;
+  background: white;
+  border: none;
+  border-top: 1px solid #aaa;
+}
+
+#features button:last-child {
+  border-bottom: 1px solid #aaa;
+}
+
+#features button:focus:after {
+  content: "";
+  position: absolute;
+  background-color: #fa5757;
+  width: 150px;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 0 auto;
+}
+
 /* Download */
 #section__download .card span {
   font-size: 0.8rem;
@@ -121,5 +147,18 @@ header .btn {
 @media (min-width: 1000px) {
   .container {
     max-width: 80%;
+  }
+
+  #card__2 {
+    top: 40px;
+  }
+
+  #card__3 {
+    top: 80px;
+  }
+
+  #features button {
+    border-top: none;
+    border-bottom: 1px solid grey;
   }
 }
