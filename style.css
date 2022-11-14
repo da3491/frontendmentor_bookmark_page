@@ -1,0 +1,125 @@
+* {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 90%;
+}
+
+.accordion-button::after {
+  background-image: url("./images/icon-arrow.svg");
+}
+
+p {
+  font-weight: 400;
+  color: #999;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #5368df;
+}
+
+nav li {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+nav .btn {
+  background-color: #fa5757;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+header .btn {
+  font-size: 0.8rem;
+}
+
+#shape {
+  position: absolute;
+  z-index: -1;
+  background-color: #5368df;
+  width: 60%;
+  height: 200px;
+  border-radius: 50%;
+  top: 100px;
+  left: 75px;
+}
+
+#shape::after {
+  position: absolute;
+  content: "";
+  background-color: #5368df;
+  width: 200px;
+  height: 200px;
+  left: 100px;
+}
+
+/* Features */
+#section__features p {
+  max-width: 500px;
+}
+
+#section__features span {
+  color: #252b46;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#section__features span:hover {
+  border-bottom: 3px solid #fa5757;
+}
+
+#section__features button {
+  font-size: 0.8rem;
+}
+
+/* Download */
+#section__download .card span {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* FAQ */
+
+/* Newsletter */
+#section__newsletter {
+  background-color: #5368df;
+}
+#section__newsletter .newsletter-body {
+  max-width: 375px;
+}
+
+#section__newsletter span {
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+}
+
+#section__newsletter button {
+  background-color: #fa5757;
+  font-size: 0.8rem;
+}
+
+/* Footer */
+
+#section__footer {
+  background-color: #252b46;
+}
+
+#section__footer li {
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 80%;
+  }
+}
