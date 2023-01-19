@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is my attempt at recreating the Frontend Mentor Bookmark Landing page."
+    />
     <!-- displays site properly based on user's device -->
     <link
       rel="icon"
@@ -27,7 +31,7 @@
   </head>
   <body>
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg py-4">
+    <nav id="section__nav" class="navbar navbar-expand-lg py-4">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./images/logo-bookmark.svg" alt="site logo" />
@@ -44,7 +48,7 @@
           <img src="./images/icon-hamburger.svg" alt="hamburger icon" />
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav text-center ms-auto mb-2 mb-lg-0">
             <li class="nav-item px-3">
               <a class="nav-link" href="#">FEATURES</a>
             </li>
@@ -60,7 +64,7 @@
       </div>
     </nav>
 
-    <!-- d-flex flex-column flex-lg-row-reverse -->
+    <!-- TODO: Include the purple shape behind the image -->
     <!-- Hero section -->
     <header id="section__hero">
       <div class="container m-auto row row-cols-lg-2 py-5">
@@ -89,21 +93,23 @@
       </div>
     </header>
 
+    <!-- TODO: Include purple shape reversed behind imgaes -->
     <!-- Features -->
     <section id="section__features">
       <div class="container text-center p3-5">
-        <h2>Features</h2>
+        <h3>Features</h3>
         <p class="mx-auto">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
-        <nav id="features">
+        <nav class="col-lg-9 mx-auto">
           <div
             class="d-flex flex-column flex-lg-row justify-content-center my-5"
             id="features__nav"
             role="tablist"
           >
+            <!-- Simple Bookmarking -->
             <button
               class="col p-3 active"
               id="features__tab1"
@@ -111,11 +117,12 @@
               data-bs-target="#features__tab1Content"
               type="button"
               role="tab"
-              aria-controls="nav-home"
+              aria-controls="features__tab1Content"
               aria-selected="true"
             >
               Simple Bookmarking
             </button>
+            <!-- Speedy Searching -->
             <button
               class="col p-3"
               id="features__tab2"
@@ -123,11 +130,12 @@
               data-bs-target="#features__tab2Content"
               type="button"
               role="tab"
-              aria-controls="nav-profile"
+              aria-controls="features__tab2Content"
               aria-selected="false"
             >
               Speedy Searching
             </button>
+            <!-- Easy Sharing -->
             <button
               class="col p-3"
               id="features__tab3"
@@ -135,13 +143,14 @@
               data-bs-target="#features__tab3Content"
               type="button"
               role="tab"
-              aria-controls="nav-contact"
+              aria-controls="features__tab3content"
               aria-selected="false"
             >
               Easy Sharing
             </button>
           </div>
         </nav>
+        <!-- Purple shape here -->
         <div id="features__tabContent" class="tab-content">
           <!-- tab 1 -->
           <div
@@ -260,7 +269,7 @@
                 src="./images/logo-chrome.svg"
                 alt="chrome logo"
               />
-              <h6>Add to Chrome</h6>
+              <h4>Add to Chrome</h4>
               <span>Minimum version 62</span>
               <img class="py-4" src="./images/bg-dots.svg" alt="dot dividers" />
               <button class="btn btn-primary">Add & Install Extension</button>
@@ -275,7 +284,7 @@
                 src="./images/logo-firefox.svg"
                 alt="firefox logo"
               />
-              <h6>Add to Chrome</h6>
+              <h4>Add to Firefox</h4>
               <span>Minimum version 55</span>
               <img class="py-4" src="./images/bg-dots.svg" alt="dot dividers" />
               <button class="btn btn-primary py-2">
@@ -292,7 +301,7 @@
                 src="./images/logo-opera.svg"
                 alt="opera logo"
               />
-              <h6>Add to Chrome</h6>
+              <h4>Add to Opera</h4>
               <span>Minimum version 46</span>
               <img class="py-4" src="./images/bg-dots.svg" alt="dot dividers" />
               <button class="btn btn-primary py-2">
@@ -412,9 +421,9 @@
               </button>
             </h2>
             <div
-              id="collapseThree"
+              id="collapseFour"
               class="accordion-collapse collapse"
-              aria-labelledby="headingThree"
+              aria-labelledby="headingFour"
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
@@ -431,28 +440,34 @@
       </div>
     </section>
 
+    <!-- TODO: Validate email and style when incorrect format -->
     <!-- Newsletter -->
     <section id="section__newsletter">
-      <div class="newsletter-body text-center text-white mx-auto py-5">
+      <div
+        class="container newsletter-body text-center text-white mx-auto py-5"
+      >
         <div class="my-4">
           <span>35,000+ ALREADY JOINED</span>
-          <h4 class="mt-2">Stay up-to-date with what we're doing</h4>
+          <h3 class="mt-2">Stay up-to-date with what we're doing</h3>
         </div>
-        <div class="container d-flex flex-column flex-lg-row gap-3 mt-4">
+        <form class="d-flex flex-column flex-lg-row gap-3">
           <input
             class="p-2"
-            type="text"
+            type="email"
             placeholder="Enter your email address"
           />
-          <button class="btn btn-danger px-4 border-0">Contact Us</button>
-        </div>
+          <div class="error-message">Whoops, that's not an email.</div>
+          <button type="submit" class="btn btn-danger px-4 border-0">
+            Contact Us
+          </button>
+        </form>
       </div>
     </section>
 
     <!-- Footer -->
     <footer id="section__footer">
       <nav class="navbar container d-flex flex-column flex-lg-row">
-        <a class="py-4 me-lg-5" href="#">
+        <a class="py-3 me-lg-5" href="#">
           <img src="./images/logo-bookmark-light.svg" alt="bookmark logo" style=
           />
         </a>
@@ -470,8 +485,12 @@
           </li>
         </ul>
         <div class="d-flex gap-5 mb-5 mb-lg-0 ms-auto-lg">
-          <a><img src="./images/icon-facebook.svg" alt="facebook logo" /></a>
-          <a><img src="./images/icon-twitter.svg" alt="twitter logo" /></a>
+          <a href="https://www.facebook.com"
+            ><img src="./images/icon-facebook.svg" alt="facebook logo"
+          /></a>
+          <a href="https://www.twitter.com"
+            ><img src="./images/icon-twitter.svg" alt="twitter logo"
+          /></a>
         </div>
       </nav>
     </footer>
